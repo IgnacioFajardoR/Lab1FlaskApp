@@ -50,8 +50,8 @@
             <div class="row no-gutters">
                 <div class="col-md-4 mt-4">
                     <a href="http://localhost:5000/kevin"><img
-                            src="https://media-exp1.licdn.com/dms/image/C4D03AQEfCdJVY3eaSA/profile-displayphoto-shrink_100_100/0?e=1608768000&v=beta&t=2a8KO9k6lndQCpRDQaeZ89mClnZqeTR80b3R1sM_duM"
-                            alt="foto-perfil-ignacio" width="150px"></a>
+                        src="https://media-exp1.licdn.com/dms/image/C4D03AQEfCdJVY3eaSA/profile-displayphoto-shrink_100_100/0?e=1608768000&v=beta&t=2a8KO9k6lndQCpRDQaeZ89mClnZqeTR80b3R1sM_duM"
+                        alt="foto-perfil-ignacio" width="150px"></a>
                     <br></br>
                     <button type="button" class="btn btn-link">Facebook</button>
                     <button type="button" class="btn btn-link">Twitter</button>
@@ -78,39 +78,30 @@
             </div>
 
         </div>
-    
-        <form class="card" style="width: 49%; padding: 10px;" align="left" action="/nuevo-integrante" method="POST"> 
-            <h5 class="card-header mb-3">Formulario</h5>
-            <div class="form-group">
-              <label for="nombreCompleto">Nombre completo</label>
-              <input required type="text" class="form-control" name="nombreCompleto">
-            </div>
-            <div class="form-group">
-                <label for="Carrera">Carrera</label>
-                <input required type="text" class="form-control" name="Carrera">
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label for="Facebook">Facebook</label>
-                    <input required type="text" class="form-control" name="Facebook" placeholder="/Facebook">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="col-md-4 mt-4">
+                    <a href="http://localhost:5000/kevin"><img
+                            src="https://media-exp1.licdn.com/dms/image/C4D03AQEfCdJVY3eaSA/profile-displayphoto-shrink_100_100/0?e=1608768000&v=beta&t=2a8KO9k6lndQCpRDQaeZ89mClnZqeTR80b3R1sM_duM"
+                            alt="foto-perfil-ignacio" width="150px"></a>
+                    <br></br>
+                    <button type="button" class="btn btn-link">Facebook</button>
+                    <button type="button" class="btn btn-link">Twitter</button>
+                    <button type="button" class="btn btn-link">Github</button>
                 </div>
-                <div class="col">
-                    <label for="Twitter">Twitter</label>
-                    <input required type="text" class="form-control" name="Twitter" placeholder="/Twitter">
+                <div class="col-md-8">
+                    <div class="card-body" align="left">
+                        <h3 class="card-title">{{nombreCompleto}}</h3>
+                        <h6 class="card-subtitle mb-2 text-muted">{{Carrera}}</h6>
+                        
+                    </div>
+
                 </div>
 
-                <div class="col">
-                    <label for="GitHub">GitHub</label>
-                    <input required type="text" class="form-control" name="GitHub" placeholder="/GitHub">
-                </div>
             </div>
-            <div class="form-group">
-                <label for="SubirCurriculum">Subir curriculum</label>
-                <input required type="file" class="form-control-file" name="SubirCurriculum">
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
 
-          </form>
+        </div>
+
     </div>
 </body>
 
