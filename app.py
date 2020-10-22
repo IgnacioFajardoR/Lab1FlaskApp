@@ -3,7 +3,6 @@ from flask import render_template
 from flask import request
 import os
 
-
 uploads_dir = os.path.join('static')
 app = Flask(__name__)
 
@@ -12,14 +11,15 @@ def index():
     print(uploads_dir )
     return render_template("home.html")
 
-@app.route('/kevin')
-def kevin():
-    return render_template('kevin.html')
-
-@app.route('/ignacio')
-def ignacio():
-    return render_template('ignacio.html')
-
+@app.route('/cv')
+def Curriculum():
+    if(request.args.get('integrante')=='kevin'):
+        return render_template('kevin.html')
+    if(request.args.get('integrante')=='ignacio'):
+        return render_template('ignacio.html')
+    else:
+        return ("Petición erronéa o integrante no existente")
+    
 
 
 @app.route('/nuevo-integrante', methods=['POST'])
@@ -38,7 +38,12 @@ def NuevoIntegrante():
 def CVNuevo():
     return render_template('CVNuevo.html')
 
+@app.errorhandler(404)
+def handle_bad_request(e):
+    return 'Petición erronea'
+
 
 if __name__ == '__main__':
     
     app.run(debug=True)
+    
